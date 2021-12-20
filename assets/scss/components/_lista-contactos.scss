@@ -1,0 +1,95 @@
+.header-bar {
+  background-color: $primaryColorDark;
+  padding: 2rem;
+  color: hsl(0, 0%, 100%);
+  font-size: 1.4rem;
+
+  .header-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    .volver__button {
+      justify-self: center;
+      align-self: center;
+
+      a {
+        background-color: $secondaryColor;
+        border-radius: 5px;
+        text-align: center;
+        color: hsl(0, 0%, 0%);
+        font-weight: bold;
+        font-size: 1.6rem;
+        padding: 0.5rem;
+        text-decoration: none;
+      }
+    }
+  }
+}
+.formulario {
+  background-color: $secondaryColor;
+  width: 95%;
+  max-width: 1100px;
+  margin: 0 auto;
+  box-shadow: 0px 5px 5px 0px rgba($color: #000000, $alpha: 0.5);
+  padding: 3rem;
+  margin-top: 2rem;
+  border-radius: 10px;
+  .legend__section {
+    h1,
+    p {
+      padding: 5px 0;
+    }
+    h1 {
+      font-size: 2.2rem;
+    }
+    p {
+      font-size: 1.6rem;
+      text-align: center;
+    }
+  }
+  .input__section {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 15px;
+    .campo {
+      padding: 10px 0;
+      display: flex;
+      flex-direction: column;
+      label {
+        font-size: 1.8rem;
+      }
+      input {
+        border: none;
+        padding: 1.3rem 0.5rem;
+        margin-top: 0.5rem;
+        font-size: 1.8rem;
+      }
+    }
+  }
+  .submit__section {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    input {
+      background-color: $primaryColor;
+      border: none;
+      color: hsl(0, 0%, 100%);
+      padding: 1rem 4rem;
+      text-transform: uppercase;
+      font-size: 1.8rem;
+      transition: background-color 0.5s ease-in-out;
+
+      &:hover {
+        cursor: pointer;
+        background-color: $primaryColorDark;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .formulario .input__section {
+    grid-template-columns: 1fr;
+  }
+}

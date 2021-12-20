@@ -1,0 +1,203 @@
+/* Estilos index */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2 {
+  text-align: center;
+  margin: 0;
+}
+
+body {
+  background-color: #c3185d;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #c3185d;
+}
+
+.header-bar {
+  background-color: #9e0a45;
+  padding: 2rem;
+  color: white;
+  font-size: 1.4rem;
+}
+.header-bar .header-options {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.header-bar .header-options .volver__button {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+.header-bar .header-options .volver__button a {
+  background-color: #ffc105;
+  border-radius: 5px;
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  font-size: 1.6rem;
+  padding: 0.5rem;
+  text-decoration: none;
+}
+
+.formulario {
+  background-color: #ffc105;
+  width: 95%;
+  max-width: 1100px;
+  margin: 0 auto;
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
+  padding: 3rem;
+  margin-top: 2rem;
+  border-radius: 10px;
+}
+.formulario .legend__section h1,
+.formulario .legend__section p {
+  padding: 5px 0;
+}
+.formulario .legend__section h1 {
+  font-size: 2.2rem;
+}
+.formulario .legend__section p {
+  font-size: 1.6rem;
+  text-align: center;
+}
+.formulario .input__section {
+  margin-top: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 15px 1fr 15px 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 15px;
+}
+.formulario .input__section .campo {
+  padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.formulario .input__section .campo label {
+  font-size: 1.8rem;
+}
+.formulario .input__section .campo input {
+  border: none;
+  padding: 1.3rem 0.5rem;
+  margin-top: 0.5rem;
+  font-size: 1.8rem;
+}
+.formulario .submit__section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 10px;
+}
+.formulario .submit__section input {
+  background-color: #c3185d;
+  border: none;
+  color: white;
+  padding: 1rem 4rem;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  -webkit-transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
+}
+.formulario .submit__section input:hover {
+  cursor: pointer;
+  background-color: #9e0a45;
+}
+
+@media only screen and (max-width: 650px) {
+  .formulario .input__section {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+.lista-contactos {
+  background-color: white;
+  width: 95%;
+  max-width: 1100px;
+  margin: 0 auto;
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
+  padding: 3rem;
+  margin-top: 4rem;
+  border-radius: 10px;
+}
+.lista-contactos h2 {
+  font-size: 2.5rem;
+}
+.lista-contactos #buscar {
+  width: 100%;
+  height: 4.5rem;
+  padding: 1rem;
+  border: 1px solid #e1e1e1;
+  margin: 2rem 0;
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
+  font-size: 1.4rem;
+  border-radius: 10px;
+}
+.lista-contactos .total-contactos {
+  text-align: center;
+  font-size: 2rem;
+  color: #c3185d;
+  margin: 2rem 0;
+}
+.lista-contactos .total-contactos span {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.lista-contactos .listado-contactos {
+  width: 100%;
+  font-size: 1.4rem;
+}
+.lista-contactos .listado-contactos thead {
+  background-color: #c3185d;
+  color: white;
+  text-transform: uppercase;
+}
+.lista-contactos .listado-contactos thead th {
+  padding: 1rem 0;
+}
+.lista-contactos .listado-contactos tbody td {
+  padding: 0.5rem;
+}
+.lista-contactos .listado-contactos tbody td a,
+.lista-contactos .listado-contactos tbody td button {
+  font-size: 2.5rem;
+  text-decoration: none;
+}
+.lista-contactos .listado-contactos tbody td a {
+  color: #ffc105;
+}
+.lista-contactos .listado-contactos tbody td button {
+  background-color: none;
+  border: none;
+  color: #c3185d;
+}
+.lista-contactos .listado-contactos tbody td:last-child {
+  text-align: center;
+}

@@ -1,0 +1,25 @@
+$primaryColor: hsl(336, 78%, 43%);
+$primaryColorDark: hsl(336, 88%, 33%);
+$secondaryColor: hsl(45, 100%, 51%);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+}
+h1,
+h2 {
+  text-align: center;
+  margin: 0;
+}
+body {
+  background-color: $primaryColor;
+}
+h2 {
+  font-size: 2rem;
+  color: $primaryColor;
+}
