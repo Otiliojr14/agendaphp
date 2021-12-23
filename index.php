@@ -1,4 +1,8 @@
-<?php include_once './assets/inc/layout/header.php'; ?>
+<?php 
+    include_once './assets/inc/layout/header.php';
+    include_once './assets/inc/functions/functions.php';
+
+?>
 
 <header class="header-bar">
     <h1>Agenda de Contactos</h1>
@@ -17,7 +21,7 @@
 <section class="lista-contactos">
     <h2>Contactos</h2>
     <input type="text" name="buscar" id="buscar" placeholder="Buscar Contactos...">
-    <p class="total-contactos"><span>2</span> Contactos</p>
+    <p class="total-contactos"><span>0</span> Contactos</p>
 
     <section class="tabla">
         <table class="listado-contactos">
@@ -30,19 +34,27 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Juan</td>
-                    <td>Udemy</td>
-                    <td>019381893</td>
-                    <td>
-                        <a href="editar.php?id=1">
-                            <i class="fas fa-pen-square"></i>
-                        </a>
-                        <button data-id="1" type="button">
-                            <i class="fas fa-trash-alt"></i>
-                        </button>
-                    </td>
-                </tr>
+                <?php $contactos = obtenerContactos(); 
+
+                    if ($contactos->num_rows): 
+                        foreach ($contactos as $contacto): ?>                    
+                        <tr>
+                            <td><?php echo $contacto['nombre_contacto']?></td>
+                            <td><?php echo $contacto['empresa_contacto']?></td>
+                            <td><?php echo $contacto['telefono_contacto']?></td>
+                            <td>
+                                <a href="editar.php?id=<?php echo $contacto['id_contacto']?>">
+                                    <i class="bi bi-pencil-square"></i>
+                                </a>
+                                <button class="borrar-btn" data-id="<?php echo $contacto['id_contacto']?>" type="button">
+                                    <i class="bi bi-trash-fill"></i>
+                                </button>
+                            </td>
+                        </tr>
+                
+                    <?php 
+                        endforeach;
+                    endif; ?>
             </tbody>
         </table>
     </section>

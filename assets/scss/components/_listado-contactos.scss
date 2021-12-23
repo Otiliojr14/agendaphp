@@ -54,12 +54,15 @@
         button {
           font-size: 2.5rem;
           text-decoration: none;
+          &:hover {
+            cursor: pointer;
+          }
         }
         a {
           color: $secondaryColor;
         }
         button {
-          background-color: none;
+          background-color: #00000000;
           border: none;
           color: $primaryColor;
         }

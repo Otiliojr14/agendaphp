@@ -1,4 +1,17 @@
-<?php include_once './assets/inc/layout/header.php'; ?>
+<?php 
+include_once './assets/inc/functions/functions.php';
+include_once './assets/inc/layout/header.php'; 
+
+$id = filter_var($_GET['id'], FILTER_VALIDATE_INT);
+
+if (!$id) {
+    die('No es válido');
+}
+
+$resultado = obtenerContacto($id);
+$contacto = $resultado->fetch_assoc();
+
+?>
 
 <header class="header-bar">
     <div class="header-options">
